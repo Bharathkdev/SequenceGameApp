@@ -34,7 +34,7 @@ const InGameScreen = props => {
     }
 
   
-    function shuffle(arr) {
+    function shuffle(arr){
     console.log("This is Shuffle");
 
         var i,
