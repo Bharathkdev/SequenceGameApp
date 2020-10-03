@@ -10,7 +10,7 @@ import {
 
 
 
-const InGameScreen = props => {
+const InGameScreen = props =>{
 
     const[move, setMove] = useState(createArray(props.level));
     const[guessCount, setGuessCount] = useState(0);
