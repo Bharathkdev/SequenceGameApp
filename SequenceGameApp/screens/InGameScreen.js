@@ -30,7 +30,7 @@ const InGameScreen = props => {
         const shuffledArray = shuffle(twodarray);
         twodarray = shuffledArray;      
 
-        return fill(twodarray, finalarray, level);
+        return displayMatrix(twodarray, finalarray, level);
     }
 
   
@@ -49,7 +49,7 @@ const InGameScreen = props => {
         return arr;    
     };
 
-    function fill(twodarray, resultArray, level){
+    function displayMatrix(twodarray, resultArray, level){
   
 
         if(Array.isArray(twodarray) &&
@@ -102,7 +102,7 @@ const InGameScreen = props => {
         if((key-emptyCell==-1 && (key%level)!=level-1) || (key-emptyCell==1 && (key%level)!=0) || Math.abs(key-emptyCell)==level ){
             twodarray[key] = "";
             twodarray[emptyCell] = item;
-            setMove(fill(twodarray, resultArray, level));
+            setMove(displayMatrix(twodarray, resultArray, level));
             setGuessCount(curNumber => curNumber + 1);
         }
 
